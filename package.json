@@ -1,0 +1,13 @@
+{
+  "name": "umbraco-mcp-skills-starter",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local Umbraco MCP and skills starter",
+  "scripts": {
+    "mcp:start": "node scripts/run-umbraco-mcp.mjs",
+    "mcp:check-node": "node -e \"const v=process.versions.node.split('.') [0]; if(Number(v)<22){console.error('Node.js 22+ required'); process.exit(1);} console.log('Node version OK:', process.versions.node);\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

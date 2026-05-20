@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "umbraco-mcp": {
+      "command": "node",
+      "args": ["scripts/run-umbraco-mcp.mjs"]
+    }
+  }
+}

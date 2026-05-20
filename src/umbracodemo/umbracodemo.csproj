@@ -6,6 +6,10 @@
     <CompressionEnabled>false</CompressionEnabled> <!-- Disable compression. E.g. for umbraco backoffice files. These files should be precompressed by node and not let dotnet handle it -->
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Views\Home.cshtml" />
+    <AdditionalFiles Remove="Views\master.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include=".github\copilot-instructions.md" />
   </ItemGroup>
 

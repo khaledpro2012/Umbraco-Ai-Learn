@@ -1,0 +1,95 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@(Model?.Name ?? "Umbraco Site")</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/css/plugins.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="preload" href="~/assets/css/fonts/dm.css" as="style" onload="this.rel='stylesheet'">
+</head>
+<body>
+    <div class="content-wrapper">
+        <header class="wrapper bg-light">
+            <div class="bg-primary text-white fw-bold fs-15 mb-2">
+                <div class="container py-2 d-md-flex flex-md-row">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon text-white fs-22 mt-1 me-2"><i class="uil uil-location-pin-alt"></i></div>
+                        <address class="mb-0">Moonshine St. 14/05 Light City</address>
+                    </div>
+                    <div class="d-flex flex-row align-items-center me-6 ms-auto">
+                        <div class="icon text-white fs-22 mt-1 me-2"><i class="uil uil-phone-volume"></i></div>
+                        <p class="mb-0">00 (123) 456 78 90</p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="icon text-white fs-22 mt-1 me-2"><i class="uil uil-message"></i></div>
+                        <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-white hover">sandbox@email.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="/">
+                            <img src="~/assets/img/logo.png" srcset="~/assets/img/logo@2x.png 2x" alt="" />
+                        </a>
+                    </div>
+                    <div class="navbar-other w-100 d-flex ms-auto">
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <li class="nav-item d-none d-md-block">
+                                <a href="#" class="btn btn-sm btn-primary rounded-pill">Contact</a>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        @RenderBody()
+    </div>
+
+    <footer class="bg-light">
+        <div class="container py-13 py-md-15">
+            <div class="row gy-6 gy-lg-0">
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <img class="mb-4" src="~/assets/img/logo-dark.png" srcset="~/assets/img/logo-dark@2x.png 2x" alt="" />
+                        <p class="mb-4">© @DateTime.UtcNow.Year Sandbox.<br class="d-none d-lg-block" />All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title mb-3">Get in Touch</h4>
+                        <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
+                        <a href="mailto:info@email.com" class="link-body">info@email.com</a><br />00 (123) 456 78 90
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title mb-3">Learn More</h4>
+                        <ul class="list-unstyled text-reset mb-0">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+</body>
+</html>

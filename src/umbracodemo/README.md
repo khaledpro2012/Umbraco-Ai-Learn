@@ -33,10 +33,16 @@ npm install
 Copy-Item .env.mcp.example .env
 ```
 
-3. The MCP server config in `.vscode/mcp.json` runs `node scripts/run-umbraco-mcp.mjs`.
+3. Update `.env` with your Umbraco API User values:
+- `UMBRACO_BASE_URL`
+- `UMBRACO_CLIENT_ID`
+- `UMBRACO_CLIENT_SECRET`
+- optional `UMBRACO_INCLUDE_TOOL_COLLECTIONS`
+
+4. The MCP server config in `.vscode/mcp.json` runs `node scripts/run-umbraco-mcp.mjs`.
    - The script loads `.env` and launches `@umbraco-cms/mcp-dev@latest`.
 
-4. Restart your editor/host so MCP reconnects.
+5. Restart your editor/host so MCP reconnects.
 
 ## MCP config reference
 
@@ -58,3 +64,33 @@ Example tool collections:
 ## Skills
 
 See `.github/skills/README.md` for details and usage.
+
+## Quick start for Umbraco MCP in this project
+
+1. Install Node dependencies:
+
+```powershell
+npm install
+```
+
+2. Create local env file from template:
+
+```powershell
+Copy-Item .env.mcp.example .env
+```
+
+3. Update `.env` with your Umbraco API User values:
+- `UMBRACO_BASE_URL`
+- `UMBRACO_CLIENT_ID`
+- `UMBRACO_CLIENT_SECRET`
+- optional `UMBRACO_INCLUDE_TOOL_COLLECTIONS`
+
+4. Start MCP server manually (optional):
+
+```powershell
+npm run mcp:umbraco
+```
+
+5. Editor integration:
+- `.vscode/mcp.json` is configured to run `scripts/run-umbraco-mcp.mjs`.
+- Restart the editor/host after editing env values.

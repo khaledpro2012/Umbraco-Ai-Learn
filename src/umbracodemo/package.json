@@ -1,0 +1,11 @@
+{
+  "name": "umbracodemo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mcp:umbraco": "node scripts/run-umbraco-mcp.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

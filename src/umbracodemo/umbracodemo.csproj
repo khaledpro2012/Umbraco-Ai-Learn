@@ -10,6 +10,9 @@
     <AdditionalFiles Remove="Views\master.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".vscode\mcp.json" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include=".github\copilot-instructions.md" />
   </ItemGroup>
 

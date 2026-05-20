@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.5.11801.241 oobstable
+VisualStudioVersion = 18.5.11801.241
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umbracodemo", "umbracodemo.csproj", "{44819D49-E854-5D92-9B2B-A7A1600A36E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerNotes.Package", "CustomerNotes.Package\CustomerNotes.Package.csproj", "{F9BE8ADD-622C-6232-2EDF-42ED08814052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{44819D49-E854-5D92-9B2B-A7A1600A36E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44819D49-E854-5D92-9B2B-A7A1600A36E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44819D49-E854-5D92-9B2B-A7A1600A36E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BE8ADD-622C-6232-2EDF-42ED08814052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BE8ADD-622C-6232-2EDF-42ED08814052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BE8ADD-622C-6232-2EDF-42ED08814052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BE8ADD-622C-6232-2EDF-42ED08814052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

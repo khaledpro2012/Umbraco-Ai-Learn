@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <PackageId>CustomerNotes.Package</PackageId>
+    <Title>Customer Notes Package</Title>
+    <Description>Umbraco package to manage customer notes.</Description>
+    <Authors>Local</Authors>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="Pages\CustomerNotes.cshtml" />
+    <AdditionalFiles Remove="Pages\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Umbraco.Cms" />
+  </ItemGroup>
+</Project>

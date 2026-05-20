@@ -1,5 +1,6 @@
-
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
 
 builder.CreateUmbracoBuilder()
     .AddBackOffice()
@@ -24,5 +25,7 @@ app.UseUmbraco()
         u.UseBackOfficeEndpoints();
         u.UseWebsiteEndpoints();
     });
+
+app.MapRazorPages();
 
 await app.RunAsync();

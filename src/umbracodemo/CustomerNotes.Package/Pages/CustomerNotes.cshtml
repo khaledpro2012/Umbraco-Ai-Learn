@@ -1,0 +1,65 @@
+@page
+@model CustomerNotes.Package.Pages.CustomerNotesModel
+@{
+    ViewData["Title"] = "Customer Notes";
+}
+
+<h2>Customer Notes</h2>
+
+<form method="post" asp-page-handler="Load" class="mb-3">
+    <label for="customerId">Customer Id</label>
+    <input id="customerId" asp-for="CustomerId" />
+    <button type="submit">Load</button>
+</form>
+
+@if (!string.IsNullOrWhiteSpace(Model.CustomerId))
+{
+    <h3>Add Note</h3>
+    <form method="post" asp-page-handler="Create" class="mb-4">
+        <input type="hidden" asp-for="CustomerId" />
+        <textarea asp-for="NewNote" rows="3" cols="60"></textarea>
+        <br />
+        <button type="submit">Add</button>
+    </form>
+
+    <h3>Notes</h3>
+    @if (Model.Notes.Count == 0)
+    {
+        <p>No notes found.</p>
+    }
+    else
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Note</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Notes)
+            {
+                <tr>
+                    <td>@item.CreatedAtUtc.ToLocalTime()</td>
+                    <td>
+                        <form method="post" asp-page-handler="Update" style="display:inline;">
+                            <input type="hidden" name="customerId" value="@Model.CustomerId" />
+                            <input type="hidden" name="noteId" value="@item.Id" />
+                            <input type="text" name="note" value="@item.Note" size="40" />
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" style="display:inline;">
+                            <input type="hidden" name="customerId" value="@Model.CustomerId" />
+                            <input type="hidden" name="noteId" value="@item.Id" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+}
